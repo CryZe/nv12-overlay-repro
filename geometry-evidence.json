@@ -1,0 +1,100 @@
+{
+  "capture": {
+    "StartUtc": "2026-10-16T19:31:26.099523Z",
+    "DurationSeconds": 45,
+    "State": "stopped",
+    "StopExitCode": 0,
+    "EndUtc": "2026-10-16T19:32:11.2906049Z"
+  },
+  "source_monitor": "LG ULTRAWIDE, VidPnSourceId=1",
+  "event_type": "Windows DxgKrnl 416 DisplayConfigPlaneChange; actual configuration, not just a support query",
+  "plane_configurations": [
+    {
+      "Id": 416,
+      "Count": 1,
+      "FirstUtc": "2026-10-16T19:31:34.1822693Z",
+      "LastUtc": "2026-10-16T19:31:34.1822693Z",
+      "color_space": 0,
+      "SrcRect": [
+        0,
+        0,
+        639,
+        360
+      ],
+      "DstRect": [
+        252,
+        231,
+        891,
+        591
+      ],
+      "ClipRect": [
+        252,
+        231,
+        891,
+        591
+      ]
+    },
+    {
+      "Id": 416,
+      "Count": 1,
+      "FirstUtc": "2026-10-16T19:31:50.1997269Z",
+      "LastUtc": "2026-10-16T19:31:50.1997269Z",
+      "color_space": 8,
+      "SrcRect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "DstRect": [
+        252,
+        231,
+        892,
+        591
+      ],
+      "ClipRect": [
+        252,
+        231,
+        891,
+        591
+      ]
+    },
+    {
+      "Id": 416,
+      "Count": 1,
+      "FirstUtc": "2026-10-16T19:31:42.1819966Z",
+      "LastUtc": "2026-10-16T19:31:42.1819966Z",
+      "color_space": 8,
+      "SrcRect": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "DstRect": [
+        252,
+        231,
+        892,
+        591
+      ],
+      "ClipRect": [
+        252,
+        231,
+        892,
+        591
+      ]
+    }
+  ],
+  "user_observations": {
+    "full_source_639": "NV12 extra text distortion; zimg bilinear and bicubic clean in that respect",
+    "right_clip_1_without_requested_resize": "NV12 extra text distortion; zimg bilinear clean in that respect"
+  },
+  "mode_verification": "Native log confirms mode1 in topmost NV12 clipped, final-size CPU RGB, and full-width NV12 control stages",
+  "excluded_capture": "Earlier automatic run stayed composed; not used for the hardware-overlay geometry comparison",
+  "limits": [
+    "No post-overlay optical pixel measurement",
+    "No conclusive Windows versus NVIDIA ownership",
+    "Different legitimate reconstruction filters need not match bit-for-bit"
+  ],
+  "inference": "Pure clipping reaches hardware with identity source/destination sizes. Extra interior text distortion is therefore more suspicious than a generic fractional-resize artifact; suspected NV12 MPO clipping/reconstruction behavior."
+}

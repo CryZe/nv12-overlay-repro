@@ -1,0 +1,7 @@
+The MIT license applies to the reproducer code and documentation.
+
+The graph-640x360.nv12 frame is a diagnostic excerpt from the graph around 2:02
+in the Veritasium video at https://www.youtube.com/watch?v=HBluLfX2F_k.
+The BGRA reference images are reconstructions of that same excerpt.
+The video-derived content is not licensed under this repository's MIT license;
+rights to the original video content remain with its respective rights holders.

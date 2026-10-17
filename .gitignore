@@ -1,0 +1,6 @@
+/build/
+/reference-test.exe
+/run.log
+/self-test.log
+/assets/*.png
+__pycache__/
